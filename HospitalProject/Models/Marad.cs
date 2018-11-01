@@ -15,6 +15,6 @@ namespace HospitalProject.Models
         [Display(Name = "السعر")]
         [Required]
         public decimal Price { get; set; }
-        public ICollection<PatientHagz> patientHagz { get; set; }
+        public virtual  ICollection<PatientHagz> patientHagz { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace HospitalProject.Models
         [Display(Name = "الخصم")]
         [Required]
         public decimal  Price { get; set; }
-        public ICollection<PatientHagz> patientHagz { get; set; }
+        public virtual ICollection<PatientHagz> patientHagz { get; set; }
+      
     }
 }

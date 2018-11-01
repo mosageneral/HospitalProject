@@ -20,7 +20,8 @@ namespace HospitalProject.Models
         public string Address { get; set; }
         [Required]
         [Display(Name = "تاريخ الحجز")]
-        public DateTime? KashfDate { get; set; }
+        
+        public DateTime KashfDate { get; set; }
 
         [Required]
         [Phone]
@@ -30,16 +31,26 @@ namespace HospitalProject.Models
         public virtual Marad marad { get; set; }
         public int TamenId { get; set; }
         public virtual Tamen tamen { get; set; }
+        [Display(Name = "خصم التأمين")]
+        public int TamenMoney { get; set; }
+        [Display(Name = "المبلغ المدفوع")]
+        public int BaidMoney { get; set; }
+        [Display(Name ="المبلغ صافي")]
+        public int AllMoney { get; set; }
         [Display (Name ="تم الدفع")]
         public bool IsBaid { get; set; }
         [Display(Name = "التشخيص")]
         public string Tashkhees { get; set; }
         [Display(Name = "الروشته")]
         public string Rosheta { get; set; }
+        [Display (Name ="موعد الإستشارة القادم")]
+        public DateTime Esteshara { get; set; }
         public int AdwyaId { get; set; }
         public virtual Adwya adwya { get; set; }
         public int RayId { get; set; }
         public virtual Ray ray { get; set; }
+        public int TahlelId { get; set; }
+        public virtual Tahlel tahlel { get; set; }
 
     }
 }

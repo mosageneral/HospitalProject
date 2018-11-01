@@ -29,5 +29,19 @@ namespace HospitalProject.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Tamen> Tamen { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Adwya> Adwyas { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Marad> Marads { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Ray> Rays { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Tahlel> Tahlels { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.PatientHagz> PatientHagzs { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.HesabatIn> HesabatIns { get; set; }
     }
 }

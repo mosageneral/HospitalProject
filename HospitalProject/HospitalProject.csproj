@@ -168,20 +168,57 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdwyasController.cs" />
+    <Compile Include="Controllers\HesabatInsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MaradsController.cs" />
+    <Compile Include="Controllers\PatientHagzsController.cs" />
+    <Compile Include="Controllers\RaysController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\TahlelsController.cs" />
+    <Compile Include="Controllers\TamenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810301652145_InitialCreate.cs" />
+    <Compile Include="Migrations\201810301652145_InitialCreate.Designer.cs">
+      <DependentUpon>201810301652145_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011244086_FristPatinet.cs" />
+    <Compile Include="Migrations\201811011244086_FristPatinet.Designer.cs">
+      <DependentUpon>201811011244086_FristPatinet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011254093_FristPatinet2.cs" />
+    <Compile Include="Migrations\201811011254093_FristPatinet2.Designer.cs">
+      <DependentUpon>201811011254093_FristPatinet2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011750074_DateTimeChange.cs" />
+    <Compile Include="Migrations\201811011750074_DateTimeChange.Designer.cs">
+      <DependentUpon>201811011750074_DateTimeChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011800447_DateTimeChange2.cs" />
+    <Compile Include="Migrations\201811011800447_DateTimeChange2.Designer.cs">
+      <DependentUpon>201811011800447_DateTimeChange2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811012022025_HesabatIn.cs" />
+    <Compile Include="Migrations\201811012022025_HesabatIn.Designer.cs">
+      <DependentUpon>201811012022025_HesabatIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811012144239_HesabatIn3AndTheHagz.cs" />
+    <Compile Include="Migrations\201811012144239_HesabatIn3AndTheHagz.Designer.cs">
+      <DependentUpon>201811012144239_HesabatIn3AndTheHagz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\HesabatIn.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Marad.cs" />
     <Compile Include="Models\PatientHagz.cs" />
-    <Compile Include="Models\PatientKashf.cs" />
     <Compile Include="Models\Ray.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
+    <Compile Include="Models\Tahlel.cs" />
     <Compile Include="Models\Tamen.cs" />
     <Compile Include="Models\Adwya.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,6 +284,41 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Tamen\Create.cshtml" />
+    <Content Include="Views\Tamen\Delete.cshtml" />
+    <Content Include="Views\Tamen\Details.cshtml" />
+    <Content Include="Views\Tamen\Edit.cshtml" />
+    <Content Include="Views\Tamen\Index.cshtml" />
+    <Content Include="Views\Adwyas\Create.cshtml" />
+    <Content Include="Views\Adwyas\Delete.cshtml" />
+    <Content Include="Views\Adwyas\Details.cshtml" />
+    <Content Include="Views\Adwyas\Edit.cshtml" />
+    <Content Include="Views\Adwyas\Index.cshtml" />
+    <Content Include="Views\Marads\Create.cshtml" />
+    <Content Include="Views\Marads\Delete.cshtml" />
+    <Content Include="Views\Marads\Details.cshtml" />
+    <Content Include="Views\Marads\Edit.cshtml" />
+    <Content Include="Views\Marads\Index.cshtml" />
+    <Content Include="Views\Rays\Create.cshtml" />
+    <Content Include="Views\Rays\Delete.cshtml" />
+    <Content Include="Views\Rays\Details.cshtml" />
+    <Content Include="Views\Rays\Edit.cshtml" />
+    <Content Include="Views\Rays\Index.cshtml" />
+    <Content Include="Views\Tahlels\Create.cshtml" />
+    <Content Include="Views\Tahlels\Delete.cshtml" />
+    <Content Include="Views\Tahlels\Details.cshtml" />
+    <Content Include="Views\Tahlels\Edit.cshtml" />
+    <Content Include="Views\Tahlels\Index.cshtml" />
+    <Content Include="Views\PatientHagzs\Create.cshtml" />
+    <Content Include="Views\PatientHagzs\Delete.cshtml" />
+    <Content Include="Views\PatientHagzs\Details.cshtml" />
+    <Content Include="Views\PatientHagzs\Edit.cshtml" />
+    <Content Include="Views\PatientHagzs\Index.cshtml" />
+    <Content Include="Views\HesabatIns\Create.cshtml" />
+    <Content Include="Views\HesabatIns\Delete.cshtml" />
+    <Content Include="Views\HesabatIns\Details.cshtml" />
+    <Content Include="Views\HesabatIns\Edit.cshtml" />
+    <Content Include="Views\HesabatIns\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -258,6 +330,29 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810301652145_InitialCreate.resx">
+      <DependentUpon>201810301652145_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011244086_FristPatinet.resx">
+      <DependentUpon>201811011244086_FristPatinet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011254093_FristPatinet2.resx">
+      <DependentUpon>201811011254093_FristPatinet2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011750074_DateTimeChange.resx">
+      <DependentUpon>201811011750074_DateTimeChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011800447_DateTimeChange2.resx">
+      <DependentUpon>201811011800447_DateTimeChange2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811012022025_HesabatIn.resx">
+      <DependentUpon>201811012022025_HesabatIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811012144239_HesabatIn3AndTheHagz.resx">
+      <DependentUpon>201811012144239_HesabatIn3AndTheHagz.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
