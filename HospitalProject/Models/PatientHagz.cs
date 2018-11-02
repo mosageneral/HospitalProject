@@ -20,9 +20,7 @@ namespace HospitalProject.Models
         public string Address { get; set; }
         [Required]
         [Display(Name = "تاريخ الحجز")]
-        
         public DateTime KashfDate { get; set; }
-
         [Required]
         [Phone]
         [Display(Name = "رقم الهاتف")]
@@ -43,8 +41,7 @@ namespace HospitalProject.Models
         public string Tashkhees { get; set; }
         [Display(Name = "الروشته")]
         public string Rosheta { get; set; }
-        [Display (Name ="موعد الإستشارة القادم")]
-        public DateTime Esteshara { get; set; }
+      
         public int AdwyaId { get; set; }
         public virtual Adwya adwya { get; set; }
         public int RayId { get; set; }

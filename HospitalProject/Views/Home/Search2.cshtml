@@ -1,15 +1,12 @@
 ﻿@model IEnumerable<HospitalProject.Models.HesabatIn>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Search2";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-@using (Html.BeginForm("search2", "Home", FormMethod.Post))
-{
-    <input id="searchName2" name="searchName2" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-}
+<h2>Search2</h2>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>

@@ -1,0 +1,134 @@
+﻿@model IEnumerable<HospitalProject.Models.PatientHagz>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.adwya.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marad.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ray.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tahlel.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tamen.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KashfDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TamenMoney)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaidMoney)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AllMoney)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tashkhees)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rosheta)
+        </th>
+        <th></th>
+    </tr>*@
+
+        @foreach (var item in Model)
+        {
+           @* <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.adwya.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marad.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ray.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tahlel.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tamen.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KashfDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TamenMoney)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaidMoney)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllMoney)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsBaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tashkhees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rosheta)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+   
+
+    </table>*@
+            <div class="container">
+                <br />
+                <h1 class="text-center">   ملف المريض </h1>
+                <br />
+                <div class="thumbnail col-md-4 container">
+                    <h3>@Html.DisplayNameFor(model => model.Name)</h3><h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                </div>
+            </div>
+        }
+    
+  

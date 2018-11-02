@@ -6,6 +6,10 @@
 }
 
 <h2>Index</h2>
+@using (Html.BeginForm("search", "Home", FormMethod.Post))
+{
+    <input id="searchName" name="searchName" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+}
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -62,9 +66,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Rosheta)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Esteshara)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -117,9 +119,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Rosheta)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Esteshara)
-        </td>
+       
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
             @Html.ActionLink("Details", "Details", new { id = item.Id }) |
@@ -161,11 +161,12 @@
                 <th>
                     @Html.DisplayNameFor(model => model.IsBaid)
                 </th>
-               
-               
                 <th>
-                    @Html.DisplayNameFor(model => model.Esteshara)
+                    @Html.DisplayNameFor(model => model.AllMoney)
                 </th>
+               
+               
+              
                 <th></th>
             </tr>
 
@@ -200,11 +201,12 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.IsBaid)
                     </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AllMoney)
+                    </td>
                    
                   
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Esteshara)
-                    </td>
+                 
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                         @Html.ActionLink("Details", "Details", new { id = item.Id }) |
