@@ -260,6 +260,10 @@
     <Compile Include="Migrations\201811072100498_Workersthree.Designer.cs">
       <DependentUpon>201811072100498_Workersthree.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811112042087_adwyaa.cs" />
+    <Compile Include="Migrations\201811112042087_adwyaa.Designer.cs">
+      <DependentUpon>201811112042087_adwyaa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Amaleyat.cs" />
@@ -470,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811072100498_Workersthree.resx">
       <DependentUpon>201811072100498_Workersthree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811112042087_adwyaa.resx">
+      <DependentUpon>201811112042087_adwyaa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

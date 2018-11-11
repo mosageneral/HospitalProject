@@ -15,20 +15,8 @@ namespace HospitalProject.Models
         [Required]
         [Display(Name = "الدواء")]
         public string Content0 { get; set; }
-        [Display(Name = "الدواء")]
-        public string Content1 { get; set; }
-        [Display(Name = "الدواء")]
-        public string Content2 { get; set; }
-        [Display(Name = "الدواء")]
-        public string Content3 { get; set; }
-        [Display(Name = "الدواء")]
-        public string Content4 { get; set; }
-        [Display(Name = "الدواء")]
-        public string Content5 { get; set; }
-        [Display(Name = "الدواء")]
-        public string Content6 { get; set; }
-        [Display(Name = "الدواء")]
-        public string Content7 { get; set; }
+        
+       
         public virtual ICollection<PatientHagz> patientHagz { get; set; }
 
 

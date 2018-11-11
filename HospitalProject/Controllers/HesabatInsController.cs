@@ -17,7 +17,10 @@ namespace HospitalProject.Controllers
 
         // GET: HesabatIns
         public ActionResult Index()
+            
         {
+            var sum = db.HesabatIns.Sum(a => a.EntryMoney);
+            ViewBag.sum = sum;
             return View(db.HesabatIns.ToList());
         }
 
