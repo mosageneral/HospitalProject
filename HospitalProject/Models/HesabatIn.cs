@@ -10,6 +10,9 @@ namespace HospitalProject.Models
         public int Id { get; set; }
         public string PatientName { get; set; }
         public int EntryMoney { get; set; }
+        public DateTime DateOfpay { get; set; }
+        public string PayType { get; set; }
+
 
     }
 }

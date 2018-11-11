@@ -21,6 +21,12 @@
         <th>
             @Html.DisplayNameFor(model => model.EntryMoney)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfpay)
+        </th>
         <th></th>
     </tr>
 
@@ -31,6 +37,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EntryMoney)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfpay)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

@@ -172,15 +172,19 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdwyasController.cs" />
+    <Compile Include="Controllers\AmaleyatsController.cs" />
     <Compile Include="Controllers\HesabatInsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MaradsController.cs" />
     <Compile Include="Controllers\PatientHagzsController.cs" />
+    <Compile Include="Controllers\RayreqsController.cs" />
     <Compile Include="Controllers\RaysController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\tahlelreqsController.cs" />
     <Compile Include="Controllers\TahlelsController.cs" />
     <Compile Include="Controllers\TamenController.cs" />
+    <Compile Include="Controllers\WorkersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -216,35 +220,77 @@
     <Compile Include="Migrations\201811012208294_HesabatIn3AndTheHagz5.Designer.cs">
       <DependentUpon>201811012208294_HesabatIn3AndTheHagz5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811021753177_Hesabat.cs" />
+    <Compile Include="Migrations\201811021753177_Hesabat.Designer.cs">
+      <DependentUpon>201811021753177_Hesabat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811021852559_amalyat.cs" />
+    <Compile Include="Migrations\201811021852559_amalyat.Designer.cs">
+      <DependentUpon>201811021852559_amalyat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811021941489_rayreq.cs" />
+    <Compile Include="Migrations\201811021941489_rayreq.Designer.cs">
+      <DependentUpon>201811021941489_rayreq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811021950057_tahlelreq.cs" />
+    <Compile Include="Migrations\201811021950057_tahlelreq.Designer.cs">
+      <DependentUpon>201811021950057_tahlelreq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811031908214_login.cs" />
+    <Compile Include="Migrations\201811031908214_login.Designer.cs">
+      <DependentUpon>201811031908214_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811031910513_login2.cs" />
+    <Compile Include="Migrations\201811031910513_login2.Designer.cs">
+      <DependentUpon>201811031910513_login2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811032005025_login3.cs" />
+    <Compile Include="Migrations\201811032005025_login3.Designer.cs">
+      <DependentUpon>201811032005025_login3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811072045315_Workers.cs" />
+    <Compile Include="Migrations\201811072045315_Workers.Designer.cs">
+      <DependentUpon>201811072045315_Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811072053342_Workers2.cs" />
+    <Compile Include="Migrations\201811072053342_Workers2.Designer.cs">
+      <DependentUpon>201811072053342_Workers2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811072100498_Workersthree.cs" />
+    <Compile Include="Migrations\201811072100498_Workersthree.Designer.cs">
+      <DependentUpon>201811072100498_Workersthree.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Amaleyat.cs" />
     <Compile Include="Models\HesabatIn.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Marad.cs" />
     <Compile Include="Models\PatientHagz.cs" />
     <Compile Include="Models\Ray.cs" />
+    <Compile Include="Models\Rayreq.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Models\Tahlel.cs" />
+    <Compile Include="Models\tahlelreq.cs" />
     <Compile Include="Models\Tamen.cs" />
     <Compile Include="Models\Adwya.cs" />
+    <Compile Include="Models\Workers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="_aspnet_HospitalProject_20181030064524DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_aspnet_HospitalProject_20181030064524DataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\GameLogo.jpg" />
+    <Content Include="Content\mosa.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\mosa.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -321,29 +367,43 @@
     <Content Include="Views\Tahlels\Details.cshtml" />
     <Content Include="Views\Tahlels\Edit.cshtml" />
     <Content Include="Views\Tahlels\Index.cshtml" />
-    <Content Include="Views\PatientHagzs\Create.cshtml" />
     <Content Include="Views\PatientHagzs\Delete.cshtml" />
     <Content Include="Views\PatientHagzs\Details.cshtml" />
-    <Content Include="Views\PatientHagzs\Edit.cshtml" />
     <Content Include="Views\PatientHagzs\Index.cshtml" />
     <Content Include="Views\HesabatIns\Create.cshtml" />
     <Content Include="Views\HesabatIns\Delete.cshtml" />
     <Content Include="Views\HesabatIns\Details.cshtml" />
     <Content Include="Views\HesabatIns\Edit.cshtml" />
     <Content Include="Views\HesabatIns\Index.cshtml" />
-    <Content Include="_aspnet_HospitalProject_20181030064524DataSet.xsc">
-      <DependentUpon>_aspnet_HospitalProject_20181030064524DataSet.xsd</DependentUpon>
-    </Content>
     <Content Include="Views\Home\Search2.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
-    <None Include="_aspnet_HospitalProject_20181030064524DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_aspnet_HospitalProject_20181030064524DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="_aspnet_HospitalProject_20181030064524DataSet.xss">
-      <DependentUpon>_aspnet_HospitalProject_20181030064524DataSet.xsd</DependentUpon>
-    </Content>
+    <Content Include="Views\Amaleyats\Create.cshtml" />
+    <Content Include="Views\Amaleyats\Delete.cshtml" />
+    <Content Include="Views\Amaleyats\Details.cshtml" />
+    <Content Include="Views\Amaleyats\Edit.cshtml" />
+    <Content Include="Views\Amaleyats\Index.cshtml" />
+    <Content Include="Views\Rayss\Create.cshtml" />
+    <Content Include="Views\Rayss\Delete.cshtml" />
+    <Content Include="Views\Rayss\Details.cshtml" />
+    <Content Include="Views\Rayss\Edit.cshtml" />
+    <Content Include="Views\Rayss\Index.cshtml" />
+    <Content Include="Views\Rayreqs\Create.cshtml" />
+    <Content Include="Views\Rayreqs\Delete.cshtml" />
+    <Content Include="Views\Rayreqs\Details.cshtml" />
+    <Content Include="Views\Rayreqs\Edit.cshtml" />
+    <Content Include="Views\Rayreqs\Index.cshtml" />
+    <Content Include="Views\tahlelreqs\Create.cshtml" />
+    <Content Include="Views\tahlelreqs\Delete.cshtml" />
+    <Content Include="Views\tahlelreqs\Details.cshtml" />
+    <Content Include="Views\tahlelreqs\Edit.cshtml" />
+    <Content Include="Views\tahlelreqs\Index.cshtml" />
+    <Content Include="Views\Workers\Create.cshtml" />
+    <Content Include="Views\Workers\Delete.cshtml" />
+    <Content Include="Views\Workers\Details.cshtml" />
+    <Content Include="Views\Workers\Edit.cshtml" />
+    <Content Include="Views\Workers\Index.cshtml" />
+    <Content Include="Views\PatientHagzs\Create.cshtml" />
+    <Content Include="Views\PatientHagzs\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -381,7 +441,36 @@
     <EmbeddedResource Include="Migrations\201811012208294_HesabatIn3AndTheHagz5.resx">
       <DependentUpon>201811012208294_HesabatIn3AndTheHagz5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\Report1.rdlc" />
+    <EmbeddedResource Include="Migrations\201811021753177_Hesabat.resx">
+      <DependentUpon>201811021753177_Hesabat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021852559_amalyat.resx">
+      <DependentUpon>201811021852559_amalyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021941489_rayreq.resx">
+      <DependentUpon>201811021941489_rayreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021950057_tahlelreq.resx">
+      <DependentUpon>201811021950057_tahlelreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811031908214_login.resx">
+      <DependentUpon>201811031908214_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811031910513_login2.resx">
+      <DependentUpon>201811031910513_login2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811032005025_login3.resx">
+      <DependentUpon>201811032005025_login3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811072045315_Workers.resx">
+      <DependentUpon>201811072045315_Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811072053342_Workers2.resx">
+      <DependentUpon>201811072053342_Workers2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811072100498_Workersthree.resx">
+      <DependentUpon>201811072100498_Workersthree.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

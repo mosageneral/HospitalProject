@@ -13,5 +13,6 @@ namespace HospitalProject.Models
         [Required]
         public string Name { get; set; }
         public virtual ICollection<PatientHagz> patientHagz { get; set; }
+        public virtual ICollection<Rayreq> rayreq { get; set; }
     }
 }

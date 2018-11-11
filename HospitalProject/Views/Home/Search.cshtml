@@ -2,14 +2,14 @@
 
 @{
     ViewBag.Title = "Search";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+  
 }
 
 
 
 
 @*<table class="table">
-    <tr>
+    <tr>  Layout = "~/Views/Shared/_Layout.cshtml";
         <th>
             @Html.DisplayNameFor(model => model.adwya.Name)
         </th>
@@ -121,14 +121,161 @@
    
 
     </table>*@
-            <div class="container">
-                <br />
-                <h1 class="text-center">   ملف المريض </h1>
-                <br />
-                <div class="thumbnail col-md-4 container">
-                    <h3>@Html.DisplayNameFor(model => model.Name)</h3><h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+            <!-- ******HEADER****** -->
+<link href = "~/Content/mosa.css" rel = "stylesheet" />
+            <header class="header">
+                <div class="container">
+                    <div class="teacher-name" style="padding-top:20px;">
+                        <div class="row" style="margin-top:0px;">
+                            <div class="col-md-9">
+                                <h2 style="font-size:38px"><strong>@Html.DisplayFor(modelItem => item.Name)</strong></h2>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="button" style="float:right;">
+                                    
+                                    <a href="#" class="btn btn-success btn-lg">Edit Profile</a>
+                                    @Html.ActionLink("كشف", "Edit","PatientHagzs", new { id = item.Id })
+                                    <a href="javascript:window.print()">Click to Print This Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:20px;">
+                        <div class="col-md-3 ">
+                            <!-- Phone & Social -->
+                            <span class="number" style="font-size:18px">Phone:<strong>@Html.DisplayFor(modelItem => item.Number)</strong></span><br />
+                            <span class="number" style="font-size:18px">Age:<strong>@Html.DisplayFor(modelItem => item.Age)</strong></span><br />
+                            <span class="number" style="font-size:18px">Address:<strong>@Html.DisplayFor(modelItem => item.Address)</strong></span><br />
+                            <span class="number" style="font-size:18px">المرض:<strong>@Html.DisplayFor(modelItem => item.marad.Name)</strong></span><br />
+                            <span  style="font-size:18px">تاريخ الكشف:@Html.DisplayFor(modelItem => item.KashfDate)</span><br />
+                           
+                            <div class="social-icons" style="padding-top:18px">
+                                <a href="#">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x" style="color:#3AAA64"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x" style="color:#3AAA64"></i>
+                                        <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x" style="color:#3AAA64"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x" style="color:#3AAA64"></i>
+                                        <i class="fa fa-slideshare fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </header>
+    <!--End of Header-->
+            <!-- Main container -->
+            <div class="container">
+                <!-- Section:Biography -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-block text-xs-left">
+                            <h2 class="card-title" style="color:#009688"><i class="fa fa-user fa-fw"></i>التشخيص</h2>
+                            <div style="height: 15px"></div>
+                            <p>@Html.DisplayFor(modelItem => item.Tashkhees).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End:Biography -->
+                <!--Section:Interests-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-block text-xs-left">
+                            <h2 class="card-title" style="color:#009688"><i class="fa fa-user fa-fw"></i>الروشته</h2>
+                            <div style="height: 15px"></div>
+                            <p>@Html.DisplayFor(modelItem => item.Rosheta).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-block">
+                            <h2 class="card-title" style="color:#009688"><i class="fa fa-rocket fa-fw"></i> </h2>
+                            <ul class="list-group" style="margin-top:15px;margin-bottom:15px;">
+                                <li class="list-group-item">@Html.DisplayFor(modelItem => item.adwya.Content0)</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End :Interests -->
+                <!-- Section:Awards -->
+                
+                <!-- End:Awards -->
+                <!-- Section:Teaching Summary -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-block">
+                            <h2 class="card-title" style="color:#009688"><i class="fa fa-rocket fa-fw"></i>الأشعه</h2>
+                            <ul class="list-group" style="margin-top:15px;margin-bottom:15px;">
+
+                                <li class="list-group-item">@Html.DisplayFor(modelItem => item.ray.Name)</li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End:Teaching Summary -->
+                <!-- Section:Class Observing -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-block">
+                            <h2 class="card-title" style="color:#009688"><i class="fa fa-rocket fa-fw"></i>التحاليل</h2>
+                            <ul class="list-group" style="margin-top:15px;margin-bottom:15px;">
+
+                                <li class="list-group-item">@Html.DisplayFor(modelItem => item.tahlel.Name)</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End:Class Observing -->
+                <!-- Section:Resources -->
+                <div class="row">
+                    <div class="col-md-12">
+                       <!--gagfdgadfgadgfadgbdgbd
+                           sbgdfg
+                           gbsfg
+                           sdfgs
+                           dfgsd
+                           gfsdfg
+                           -->
+                    </div>
+                </div>
+                <!-- End:Resources -->
+                <!-- Section:Publications -->
+                <div class="row">
+                    <div class="col-md-12">
+              <!--sdfsdgsdfgsd
+                  gsdfgs
+                  dgs
+                  dfg
+                  adfgs
+                  dfg
+                  dg
+                  s
+                  gsd
+                  fg-->
+                    </div>
+                </div>
+                <!-- End:Publications -->
+            </div> 
         }
     
   

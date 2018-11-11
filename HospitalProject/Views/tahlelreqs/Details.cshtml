@@ -1,0 +1,51 @@
+﻿@model HospitalProject.Models.tahlelreq
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>التفاصيل</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           التحليل
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tahlel.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PateintName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PateintName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfTahlel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfTahlel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("عودة", "Index")
+</p>

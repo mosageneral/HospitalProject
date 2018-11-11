@@ -1,0 +1,57 @@
+﻿@model HospitalProject.Models.tahlelreq
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>حذف</h2>
+
+<h3>هل انت متأكد من حذف هذا ..؟</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            التحليل
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tahlel.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PateintName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PateintName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfTahlel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfTahlel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("عودة", "Index")
+        </div>
+    }
+</div>

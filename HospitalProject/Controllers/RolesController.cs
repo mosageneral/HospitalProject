@@ -8,8 +8,10 @@ using System.Web.Mvc;
 
 namespace HospitalProject.Controllers
 {
+    [Authorize]
     public class RolesController : Controller
     {
+       
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: Roles
         public ActionResult Index()

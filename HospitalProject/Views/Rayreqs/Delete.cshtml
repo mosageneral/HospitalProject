@@ -1,0 +1,57 @@
+﻿@model HospitalProject.Models.Rayreq
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>حذف ...؟</h2>
+
+<h3>هل انت متأكد كم حذف هذا ...؟</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           الأشعة
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ray.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PateintName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PateintName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfRay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfRay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("عودة", "Index")
+        </div>
+    }
+</div>

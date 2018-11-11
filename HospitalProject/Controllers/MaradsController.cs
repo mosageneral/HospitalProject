@@ -10,6 +10,7 @@ using HospitalProject.Models;
 
 namespace HospitalProject.Controllers
 {
+    [Authorize]
     public class MaradsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

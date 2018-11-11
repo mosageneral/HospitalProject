@@ -1,0 +1,51 @@
+﻿@model HospitalProject.Models.Rayreq
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>تفاصيل</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+          الأشعة
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ray.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PateintName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PateintName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfRay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfRay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("عودة", "Index")
+</p>

@@ -49,23 +49,26 @@ namespace HospitalProject.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "إسم المستخدم")]
+        public string UserName { get; set; }
+      
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "كلمة السر")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "تذكرني ؟")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
         [Required]
-        [EmailAddress]
+        [Display(Name = "User Name")]
+        public string UserName { get; set; }
+        [Required]
+       [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
@@ -84,7 +87,7 @@ namespace HospitalProject.Models
     public class ResetPasswordViewModel
     {
         [Required]
-        [EmailAddress]
+       
         [Display(Name = "Email")]
         public string Email { get; set; }
 
@@ -105,7 +108,7 @@ namespace HospitalProject.Models
     public class ForgotPasswordViewModel
     {
         [Required]
-        [EmailAddress]
+     
         [Display(Name = "Email")]
         public string Email { get; set; }
     }

@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>قائمة الكشوفات</h2>
 @using (Html.BeginForm("search", "Home", FormMethod.Post))
 {
-    <input id="searchName" name="searchName" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <input id="searchName" name="searchName" class="form-control mr-sm-2" type="search" placeholder="بحث" aria-label="Search">
 }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p style="font-size:20px;">
+    @Html.ActionLink("إنشاء كشف", "Create")
 </p>
 @{
     if (HttpContext.Current.User.IsInRole("Doctor"))
@@ -121,9 +121,9 @@
         </td>
        
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            @Html.ActionLink("كشف", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("تفاصيل", "Details", new { id = item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id = item.Id })
         </td>
     </tr>
 }
@@ -208,9 +208,9 @@
                   
                  
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        @Html.ActionLink("تعديل", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("تفاصيل", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("حذف", "Delete", new { id = item.Id })
                     </td>
                 </tr>
             }

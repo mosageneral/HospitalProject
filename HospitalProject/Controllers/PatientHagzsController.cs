@@ -10,6 +10,7 @@ using HospitalProject.Models;
 
 namespace HospitalProject.Controllers
 {
+    [Authorize]
     public class PatientHagzsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -62,6 +63,8 @@ namespace HospitalProject.Controllers
                 db.PatientHagzs.Add(patientHagz);
                 hesabat.PatientName = patientHagz.Name;
                 hesabat.EntryMoney = ((patientHagz.BaidMoney) - ((patientHagz.TamenMoney * 100) / 100));
+                hesabat.DateOfpay= DateTime.Now;
+                hesabat.PayType = "كشف";
                 db.HesabatIns.Add(hesabat);
                 db.SaveChanges();
                 return RedirectToAction("Index");

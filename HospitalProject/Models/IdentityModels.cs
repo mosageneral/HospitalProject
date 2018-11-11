@@ -8,7 +8,9 @@ namespace HospitalProject.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
+        
     {
+    
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -43,5 +45,13 @@ namespace HospitalProject.Models
         public System.Data.Entity.DbSet<HospitalProject.Models.PatientHagz> PatientHagzs { get; set; }
 
         public System.Data.Entity.DbSet<HospitalProject.Models.HesabatIn> HesabatIns { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Amaleyat> Amaleyats { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Rayreq> Rayreqs { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.tahlelreq> tahlelreqs { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Workers> Workers { get; set; }
     }
 }
