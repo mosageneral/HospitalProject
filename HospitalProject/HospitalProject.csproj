@@ -292,16 +292,27 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\139534awomanundergoesamammogramsaspecialtypeofxrayofthebreasts.jpg" />
     <Content Include="Content\armscarecheck905874.jpg" />
     <Content Include="Content\bloodpressuregaugebusinesscomputer263370.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bot102512.png" />
+    <Content Include="Content\downloadfile.jpg" />
+    <Content Include="Content\f27f531198f7feb71b7d392583c5b00d2.jpg" />
     <Content Include="Content\FB_IMG_15427066335674161.jpg" />
     <Content Include="Content\FB_IMG_15427066406234931.jpg" />
     <Content Include="Content\GameLogo.jpg" />
     <Content Include="Content\gulpfile.js" />
+    <Content Include="Content\howtohireanaccountant.jpg" />
     <Content Include="Content\mosa.css" />
     <Content Include="Content\mts.png" />
+    <Content Include="Content\patients.jpg" />
+    <Content Include="Content\picturetopeople.org71d127d8dacdf58092003d83192cb77d4fe69f630445ee9437.png" />
+    <Content Include="Content\resizedIMG9883.jpg" />
+    <Content Include="Content\Waitinglist.jpg" />
+    <Content Include="Content\wallmartendhealthinsurance.jpg" />
+    <Content Include="Content\xrayheartbymmattes.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
