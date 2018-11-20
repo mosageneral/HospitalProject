@@ -59,6 +59,7 @@ namespace HospitalProject.Controllers
             {
 
                 patientHagz.KashfDate = DateTime.Now;
+              
                 patientHagz.AllMoney = ((patientHagz.BaidMoney) - ((patientHagz.TamenMoney * 100 ) / 100));
                 db.PatientHagzs.Add(patientHagz);
                 hesabat.PatientName = patientHagz.Name;
@@ -103,7 +104,7 @@ namespace HospitalProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Age,Address,KashfDate,Number,MaradId,TamenId,IsBaid,Tashkhees,Rosheta,Esteshara,AdwyaId,RayId,TahlelId")] PatientHagz patientHagz)
+        public ActionResult Edit([Bind(Include = "Id,Name,Age,Address,KashfDate,Number,MaradId,TamenId,IsBaid,Tashkhees,Rosheta,Esteshara,AdwyaId,RayId,TahlelId,EndTurn")] PatientHagz patientHagz)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +112,7 @@ namespace HospitalProject.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AdwyaId = new SelectList(db.Adwyas, "Id", "Name", patientHagz.AdwyaId);
+            ViewBag.AdwyaId = new SelectList(db.Adwyas, "Id", "Name", patientHagz.AdwyaId);     
             ViewBag.MaradId = new SelectList(db.Marads, "Id", "Name", patientHagz.MaradId);
             ViewBag.RayId = new SelectList(db.Rays, "Id", "Name", patientHagz.RayId);
             ViewBag.TahlelId = new SelectList(db.Tahlels, "Id", "Name", patientHagz.TahlelId);

@@ -1,79 +1,195 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-@using Microsoft.AspNet.Identity
-@using HospitalProject.Models
-<div class="jumbotron">
-    <h1>عيادة</h1>
-    <p class="lead">عيادات جميع التخصصات الطبيه </p>
-    <p><a href="" class="btn btn-primary btn-lg">تابعنا &raquo;</a></p>
+﻿
+
+    @{
+        ViewBag.Title = "Home Page";
+    }
+    @using Microsoft.AspNet.Identity
+    @using HospitalProject.Models
+<header id="head">
+    <div class="container">
+       
+        <div id="head2">
+            <h2 >Wellcome To Smart Doctor</h2>
+            <h1>The Perfect Solution For Hospitals</h1>
+            <a class="btn btn-warning">Learn More</a>
+        </div>
+        <br />
+
+        <br />
+        <br />
+
+        <br />
+    </div>
+</header>
+<div class="row">
+    <div class="container">
+        <h1 class="lead">خدمات المرضى</h1>
+        <div class="row">
+
+            <div class="col-md-2 ">
+               <a href="~/PatientHagzs/Create"><img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" /></a>
+                <h3 class="text-center">عمل كشف</h3>
+
+            </div>
+            <div class="col-md-2 ">
+                <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+                <br />
+                <h3 class="text-center">عمل كشف</h3>
+
+
+            </div>
+            <div class="col-md-2 ">
+                <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+                <br />
+                <h3 class="text-center">عمل كشف</h3>
+
+
+            </div>
+            <div class="col-md-2 ">
+                <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+                <h3 class="text-center">عمل كشف</h3>
+
+            </div>
+            <div class="col-md-2 ">
+                <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+                <br />
+                <h3 class="text-center">عمل كشف</h3>
+
+
+            </div>
+            <div class="col-md-2 ">
+                <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+                <br />
+                <h3 class="text-center">عمل كشف</h3>
+
+
+            </div>
+        </div>
+
+    </div>
+
 </div>
-@{ 
-    HttpContext.Current.User.IsInRole("");
-}
-<div class="row container">
-    <div class="col-md-4">
-        <div class="thumbnail">
+<br />
+<div class="container">
+    <h1 class="lead">خدمات إدارية</h1>
+    <div class="row">
 
-            <a class="btn btn-success" href="~/PatientHagzs/Create">عمل كشف</a>
-
-        </div>
-        <div class="thumbnail">
-
-            <a class="btn btn-success" href="~/tahlelreqs/Create">عمل تحليل</a>
+        <div class="col-md-2 ">
+            <a href="~/Home/Index"><img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" /></a><br />
+            <h3 class="text-center">عمل كشف</h3>
 
         </div>
-        <div class="thumbnail">
+        <div class="col-md-2 ">
+            <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+            <br />
+            <h3 class="text-center">عمل كشف</h3>
 
-            <a class="btn btn-success" href="~/tamen">ادارة التأمينات</a>
+
+        </div>
+        <div class="col-md-2 ">
+            <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+            <br />
+            <h3 class="text-center">عمل كشف</h3>
+
+
+        </div>
+        <div class="col-md-2 ">
+            <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+            <h3 class="text-center">عمل كشف</h3>
+
+        </div>
+        <div class="col-md-2 ">
+            <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+            <br />
+            <h3 class="text-center">عمل كشف</h3>
+
+
+        </div>
+        <div class="col-md-2 ">
+            <img class="img-responsive img-circle " src="~/Content/bloodpressuregaugebusinesscomputer263370.jpg" />
+            <br />
+            <h3 class="text-center">عمل كشف</h3>
+
 
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="thumbnail">
 
-            <a class="btn btn-success" href="~/rayreqs/Create">عمل أشعه</a>
-
-        </div>
-        <div class="thumbnail">
-
-            <a class="btn btn-success" href="~/marads">اضافة مرض او تخصص</a>
-
-        </div>
-        <div class="thumbnail">
-
-            <a class="btn btn-success" href="~/rays/Create">اضافة أشعه</a>
-
-        </div>
-    </div>
-    
-    <div class="col-md-4">
-       
-       
-       
-      
-        
-       
-        <div class="thumbnail">
-          
-            <a class="btn btn-success" href="~/adwyas/Create">اضافة ادوية</a>
-
-        </div>
-        <div class="thumbnail">
-            
-            <a class="btn btn-success" href="~/tahlels/Create">اضافة تحليل</a>
-
-        </div>
-        <div class="thumbnail">
-            
-            <a class="btn btn-success" href="~/hesabatins">كشف الحسابات</a>
-
-        </div>
-        <div class="thumbnail">
-
-            <a class="btn btn-success" href="~/amaleyats">العمليات</a>
-
-        </div>
-
-    </div>
 </div>
+
+</div>
+
+        @{
+            HttpContext.Current.User.IsInRole("");
+        }
+        <div class="row container">
+            <div class="col-md-4">
+                <div class="thumbnail">
+
+                    <a class="btn btn-success glyphicon glyphicon-arrow-up" href="~/PatientHagzs/Create">كشوفات</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/Home/WaitList">انتظار كشوفات</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/tahlelreqs/Create">عمل تحليل</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/tamen">ادارة التأمينات</a>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/rayreqs/Create">عمل أشعه</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/marads">اضافة مرض او تخصص</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/rays/Create">اضافة أشعه</a>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+
+
+
+
+
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/adwyas/Create">اضافة ادوية</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/tahlels/Create">اضافة تحليل</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/hesabatins">كشف الحسابات</a>
+
+                </div>
+                <div class="thumbnail">
+
+                    <a class="btn btn-success" href="~/amaleyats">العمليات</a>
+
+                </div>
+
+            </div>
+        </div>
+

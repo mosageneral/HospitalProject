@@ -21,6 +21,7 @@ namespace HospitalProject.Models
         [Required]
         [Display(Name = "تاريخ الحجز")]
         public DateTime KashfDate { get; set; }
+       
         [Required]
         [Phone]
         [Display(Name = "رقم الهاتف")]
@@ -35,7 +36,7 @@ namespace HospitalProject.Models
         public int BaidMoney { get; set; }
         [Display(Name ="المبلغ صافي")]
         public int AllMoney { get; set; }
-        [Display (Name ="تم الدفع")]
+        [Display (Name ="ارسال الى قائمة الإنتظار")]
         public bool IsBaid { get; set; }
         [Display(Name = "التشخيص")]
         public string Tashkhees { get; set; }
@@ -48,6 +49,8 @@ namespace HospitalProject.Models
         public virtual Ray ray { get; set; }
         public int TahlelId { get; set; }
         public virtual Tahlel tahlel { get; set; }
+        [Display(Name = "إنهاء الكشف")]
+        public bool EndTurn { get; set; }
 
     }
 }

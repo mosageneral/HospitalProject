@@ -10,7 +10,6 @@ using HospitalProject.Models;
 
 namespace HospitalProject.Controllers
 {
-    [Authorize]
     public class TamenController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -47,7 +46,7 @@ namespace HospitalProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Price")] Tamen tamen)
+        public ActionResult Create([Bind(Include = "Id,Name,Address,PhoneNumber,Agent,Email,WebSite,Price")] Tamen tamen)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +78,7 @@ namespace HospitalProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Price")] Tamen tamen)
+        public ActionResult Edit([Bind(Include = "Id,Name,Address,PhoneNumber,Agent,Email,WebSite,Price")] Tamen tamen)
         {
             if (ModelState.IsValid)
             {

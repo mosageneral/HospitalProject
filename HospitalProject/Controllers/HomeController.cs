@@ -15,6 +15,13 @@ namespace HospitalProject.Controllers
         {
             return View();
         }
+       
+        public ActionResult WaitList()
+        {
+
+            var s = db.PatientHagzs.OrderBy(a => a.KashfDate).Where(a=>a.IsBaid ==true && a.EndTurn ==false);
+            return View(s.ToList());
+        }
 
         public ActionResult About()
         {
@@ -24,9 +31,11 @@ namespace HospitalProject.Controllers
         }
         public ActionResult Search(string searchName)
         {
-            var result = db.PatientHagzs.Where(a => a.Name.Contains(searchName)
-             || a.Number.Contains(searchName)
-             || a.Age.ToString ().Contains(searchName)
+            var result = db.PatientHagzs.Where(a => a.Name==(searchName)
+            || a.Number==(searchName)
+           ||a.Id.ToString()== searchName
+             || a.Age.ToString ()==(searchName)
+             
             ).ToList();
 
             return View(result);

@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>تفاصيل</h2>
 
 <div>
-    <h4>PatientHagz</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -114,12 +114,20 @@
         <dd>
             @Html.DisplayFor(model => model.Rosheta)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndTurn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndTurn)
+        </dd>
+
 
       
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("عودة", "Index")
 </p>

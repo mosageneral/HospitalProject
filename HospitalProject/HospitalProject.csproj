@@ -264,6 +264,14 @@
     <Compile Include="Migrations\201811112042087_adwyaa.Designer.cs">
       <DependentUpon>201811112042087_adwyaa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811131319595_waitlist.cs" />
+    <Compile Include="Migrations\201811131319595_waitlist.Designer.cs">
+      <DependentUpon>201811131319595_waitlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811152136155_Tamenn.cs" />
+    <Compile Include="Migrations\201811152136155_Tamenn.Designer.cs">
+      <DependentUpon>201811152136155_Tamenn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Amaleyat.cs" />
@@ -284,10 +292,16 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\armscarecheck905874.jpg" />
+    <Content Include="Content\bloodpressuregaugebusinesscomputer263370.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\FB_IMG_15427066335674161.jpg" />
+    <Content Include="Content\FB_IMG_15427066406234931.jpg" />
     <Content Include="Content\GameLogo.jpg" />
+    <Content Include="Content\gulpfile.js" />
     <Content Include="Content\mosa.css" />
+    <Content Include="Content\mts.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -346,11 +360,6 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
-    <Content Include="Views\Tamen\Create.cshtml" />
-    <Content Include="Views\Tamen\Delete.cshtml" />
-    <Content Include="Views\Tamen\Details.cshtml" />
-    <Content Include="Views\Tamen\Edit.cshtml" />
-    <Content Include="Views\Tamen\Index.cshtml" />
     <Content Include="Views\Adwyas\Create.cshtml" />
     <Content Include="Views\Adwyas\Delete.cshtml" />
     <Content Include="Views\Adwyas\Details.cshtml" />
@@ -408,9 +417,20 @@
     <Content Include="Views\Workers\Index.cshtml" />
     <Content Include="Views\PatientHagzs\Create.cshtml" />
     <Content Include="Views\PatientHagzs\Edit.cshtml" />
+    <Content Include="Views\Home\WaitList.cshtml" />
+    <Content Include="Views\Tamen\Create.cshtml" />
+    <Content Include="Views\Tamen\Delete.cshtml" />
+    <Content Include="Views\Tamen\Details.cshtml" />
+    <Content Include="Views\Tamen\Edit.cshtml" />
+    <Content Include="Views\Tamen\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\img\" />
+    <Folder Include="Content\js\" />
+    <Folder Include="Content\scss\" />
+    <Folder Include="Content\vendor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -477,6 +497,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811112042087_adwyaa.resx">
       <DependentUpon>201811112042087_adwyaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811131319595_waitlist.resx">
+      <DependentUpon>201811131319595_waitlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811152136155_Tamenn.resx">
+      <DependentUpon>201811152136155_Tamenn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
