@@ -34,7 +34,7 @@ namespace HospitalProject.Models
 
         [Display(Name = "الخصم")]
         [Required]
-        public decimal  Price { get; set; }
+        public int  Price { get; set; }
         public virtual ICollection<PatientHagz>patientHagz{ get; set; }
       
     }

@@ -3,14 +3,54 @@
     padding-bottom: 20px;
     
 }
-
+#doctorinfo{
+    border:2px solid black ;
+    border-radius:10px;
+}
+#patientinfo{
+    margin-top:2px;
+    border:2px solid black ;
+    border-radius:10px;
+}
+#rosheta{
+     margin-top:2px;
+    border:2px solid black ;
+    border-radius:10px;
+}
+.custom{
+    font-size:19px;
+    
+}
+.custom:hover{
+    font-size:25px;
+}
+#roshetafooter{
+     margin-top:2px;
+    border:2px solid black ;
+    border-radius:10px;
+}
+#r::first-letter{
+    font-family:Aldhabi;
+    font-size:80px;
+    font-style:italic;
+    
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-top:50px;
-    padding-bottom:50px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top:1px;
+    padding-bottom:1px;
+    padding-left: 1px;
+    padding-right: 1px;
     
+}
+#navhead{
+    font-family:Algerian;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+  
 }
 
 #head{
@@ -30,26 +70,15 @@
 
   width:100%;
 }
-.navbar-inverse {
-    background-color: #114a7b;
-    border-color: #114a7b;
-        height: 90px;
-        
-}
-.navbar-inverse .navbar-nav > li > a {
-    color: #dbd8f9;
-    font-size: 18px;
-}
 
-.navbar > .container .navbar-brand {
-    margin-left: -15px;
-    font-size: 25px;
-}
+
+
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    padding-top: 20px;
+    padding-top: 15px;
     margin-left: auto;
 }
 
@@ -67,7 +96,15 @@ textarea {
     max-width: 280px;
 }
 @media print{
-
+    #sidebar{
+          display:none;
+     }
+    #nav{
+ display:none;
+    }
+    #foot{
+         display:none;
+    }
     #bt{
         display:none;
     }
@@ -83,5 +120,6 @@ textarea {
     padding-left: 0px;
     padding-right: 0px;
 }
+     
      
 }

@@ -53,5 +53,9 @@ namespace HospitalProject.Models
         public System.Data.Entity.DbSet<HospitalProject.Models.tahlelreq> tahlelreqs { get; set; }
 
         public System.Data.Entity.DbSet<HospitalProject.Models.Workers> Workers { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Activate> Activates { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.HospitalInfo> HospitalInfoes { get; set; }
     }
 }

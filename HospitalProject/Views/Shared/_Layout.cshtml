@@ -6,40 +6,135 @@
     <title>Smart Doctor</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="nav navbar-default navbar-Dark navbar-fixed-top " id="nav">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               
-                <img class=" img-responsive navbar-brand" style="width:250px;height:150px; padding-bottom:100px;" src="~/Content/picturetopeople.org71d127d8dacdf58092003d83192cb77d4fe69f630445ee9437.png" />
+                <a href="~/Home" class="navbar-brand">Smart Doctor</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("الصفحة الرئيسية", "Index", "Home")</li>
-                    <li>@Html.ActionLink("عن التطبيق", "About", "Home")</li>
-                   
+                    <li>
+                        <a href="~/Home"> الرئيسية <i class="glyphicon glyphicon-home"></i> </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/About"> عن التطبيق <i class="glyphicon glyphicon-book"></i>  </a>
+                    </li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    @Html.Partial("_LoginPartial")
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="container body-content" >
-        @RenderBody()
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div id="sidebar" class=" col-md-4">
+              <ul class="list-group">
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/PatientHagzs/Create">
+                          <p class="custom"> عمل كشف</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/PatientHagzs/index">
+                          <p class="custom">كشوفات</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/rayreqs/Create">
+                          <p class="custom">عمل أشعه</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/home/waitlist">
+                         <p class="custom"> لائحة الإنتظار</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/tahlelreqs/create">
+                       <p class="custom">   عمل تحليل</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/Amaleyats/create">
+                          <p class="custom">  العمليات</p> 
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/Marads/Create">
+                     <p class="custom"> إضافة مرض أو تخصص</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/tamen/index">
+                          <p class="custom">ادارة التأمينات</p> 
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/tahlels/index">
+                          <p class="custom">إدارة التحاليل</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/rays/index">
+                          <p class="custom">أدارة الأشعة</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/Adwyas/index">
+                          <p class="custom">ادارة مجموعات الأدوية</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/manage/ChangePassword">
+                          <p class="custom">لوحة التحكم</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/hesabatins/index">
+                        <p class="custom">  ادارة الحسابات</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/Workers/Index">
+                         <p class="custom"> ادارة العاملين</p>
+                      </a>
+                  </li>
+                  <li class="list-group-item btn-warning">
+                      <a class="list-group-item" href="~/HospitalInfoes/index">
+                         <p class="custom"> إدارة معلومات المستشفى</p>
+                      </a>
+                  </li>
+              </ul>
+                 </div>
+            <div>        
+            </div>
+            <div class="col-md-8">
+                <div>
+                    @RenderBody()
+                   
+                    @Scripts.Render("~/bundles/jquery")
+                    @Scripts.Render("~/bundles/bootstrap")
+                    @RenderSection("scripts", required: false)
+                </div>
+            </div>
+         
+        </div>
         <hr />
-        <footer>
+        <footer id="foot" class="text-center">
             <p>&copy; @DateTime.Now.Year - Smart Doctor</p>
         </footer>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+   
 </body>
 </html>

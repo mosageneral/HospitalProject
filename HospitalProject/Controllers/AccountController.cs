@@ -57,8 +57,27 @@ namespace HospitalProject.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            ApplicationDbContext db = new ApplicationDbContext();
+            var startdate = db.Activates.Where(a => a.EndDate < DateTime.Now || a.EndDate == DateTime.Now);
+
+         
+
+
+            if (startdate.Count() == 1)
+            {
+                ViewBag.ReturnUrl = returnUrl;
+                ViewBag.Dt = startdate.Count();
+                return RedirectToAction("Index", "Activates");
+              
+               
+               
+            }
+            else { 
+          
             ViewBag.ReturnUrl = returnUrl;
+         
             return View();
+            }
         }
 
         //

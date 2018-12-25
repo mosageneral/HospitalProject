@@ -1,0 +1,18 @@
+﻿@model IEnumerable<HospitalProject.Models.HospitalInfo>
+
+
+
+
+@foreach (var item in Model) {
+    
+        
+        <h1>@Html.DisplayFor(modelItem => item.Name)</h1>    
+       
+         <h2>@Html.DisplayFor(modelItem => item.Address)</h2>   
+          
+         <h2>@Html.DisplayFor(modelItem => item.DoctorName)</h2>     
+       
+   
+}
+
+

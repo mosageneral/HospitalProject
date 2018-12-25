@@ -8,11 +8,15 @@
 <h2>رئيسية الحسابات</h2>
 @using (Html.BeginForm("search2", "Home", FormMethod.Post))
 {
-    <input id="searchName2" name="searchName2" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <div style="padding-left:20px;">
+        <p>من ---</p>  <input type="date" id="searchName2" name="searchName2" required  class="form-control mr-sm-2" placeholder="Search" aria-label="Search" />
+        <p>إلى ---</p>  <input type="date" id="searchName3" name="searchName3" required class="form-control mr-sm-2" placeholder="Search" aria-label="Search" />
+        <input type="submit" class="form-control mr-sm-2 btn btn-success"  value="بحث" />
+
+    </div>
+
 }
-<p>
-    @Html.ActionLink("انشاء جديد", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>

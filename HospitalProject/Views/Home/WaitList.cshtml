@@ -31,7 +31,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
        
         <td>
@@ -49,11 +50,23 @@
         <td>
             @Html.DisplayFor(modelItem => item.Number)
         </td>
-        
-        <td>
-            @Html.ActionLink("كشف", "Edit","PatientHagzs", new { id = item.Id }, new { @class = "btn btn-primary btn-lg" }) 
-           
-        </td>
+        @{if (HttpContext.Current.User.IsInRole("Nurse"))
+            {
+            <td>
+                @Html.ActionLink("تعديل", "Edit", "PatientHagzs", new { id = item.Id }, new { @class = "btn btn-primary btn-lg" })
+
+            </td>
+            }
+            else
+            {
+                <td>
+                    @Html.ActionLink("كشف", "Edit", "PatientHagzs", new { id = item.Id }, new { @class = "btn btn-primary btn-lg" })
+
+                </td>
+            }
+
+
+        }
     </tr>
 }
 

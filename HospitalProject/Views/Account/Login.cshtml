@@ -5,6 +5,7 @@
 }
 
 <h2>تسجيل الدخول</h2>
+<h1>@ViewBag.Dt</h1>
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">
@@ -41,21 +42,20 @@
                         <input type="submit" value="تسجيل الدخول" class="btn btn-default" />
                     </div>
                 </div>
-                @* <p>
-                        @Html.ActionLink("Register as a new user", "Register")
-                    </p>
-                    Enable this once you have account confirmation enabled for password reset functionality
-                        <p>
-                            @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                        </p>*@
             }
         </section>
     </div>
     <div class="col-md-4">
-      
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     </div>
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<script>
+  
+    $(document).ready(function () {
+        $("#sidebar").addClass("hidden");
+    });
+</script>

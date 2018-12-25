@@ -14,6 +14,7 @@ namespace HospitalProject.Models
         [Display(Name = "النقدية")]
         public int EntryMoney { get; set; }
         [Display(Name = "تاريخ الدفع")]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTime DateOfpay { get; set; }
         [Display(Name = "نوع التوريد")]
         public string PayType { get; set; }

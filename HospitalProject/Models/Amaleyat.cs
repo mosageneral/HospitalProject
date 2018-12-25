@@ -16,6 +16,7 @@ namespace HospitalProject.Models
         [Display(Name = "السعر")]
         public int Price { get; set; }
         [Display(Name = "التاريخ")]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTime  Date { get; set; }
         [Display(Name = "تمت")]
         public bool IsDone { get; set; }

@@ -171,10 +171,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActivatesController.cs" />
     <Compile Include="Controllers\AdwyasController.cs" />
     <Compile Include="Controllers\AmaleyatsController.cs" />
     <Compile Include="Controllers\HesabatInsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HospitalInfoesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MaradsController.cs" />
     <Compile Include="Controllers\PatientHagzsController.cs" />
@@ -272,14 +274,53 @@
     <Compile Include="Migrations\201811152136155_Tamenn.Designer.cs">
       <DependentUpon>201811152136155_Tamenn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811241818091_activate.cs" />
+    <Compile Include="Migrations\201811241818091_activate.Designer.cs">
+      <DependentUpon>201811241818091_activate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811261933429_Hospitalinfo.cs" />
+    <Compile Include="Migrations\201811261933429_Hospitalinfo.Designer.cs">
+      <DependentUpon>201811261933429_Hospitalinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022152260_price.cs" />
+    <Compile Include="Migrations\201812022152260_price.Designer.cs">
+      <DependentUpon>201812022152260_price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022212301_price22.cs" />
+    <Compile Include="Migrations\201812022212301_price22.Designer.cs">
+      <DependentUpon>201812022212301_price22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022220334_price223.cs" />
+    <Compile Include="Migrations\201812022220334_price223.Designer.cs">
+      <DependentUpon>201812022220334_price223.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022230023_price2258.cs" />
+    <Compile Include="Migrations\201812022230023_price2258.Designer.cs">
+      <DependentUpon>201812022230023_price2258.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812032101288_checkdate.cs" />
+    <Compile Include="Migrations\201812032101288_checkdate.Designer.cs">
+      <DependentUpon>201812032101288_checkdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812032108533_checkdate2.cs" />
+    <Compile Include="Migrations\201812032108533_checkdate2.Designer.cs">
+      <DependentUpon>201812032108533_checkdate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812102121001_mosa.cs" />
+    <Compile Include="Migrations\201812102121001_mosa.Designer.cs">
+      <DependentUpon>201812102121001_mosa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Activate.cs" />
     <Compile Include="Models\Amaleyat.cs" />
     <Compile Include="Models\HesabatIn.cs" />
+    <Compile Include="Models\HospitalInfo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Marad.cs" />
     <Compile Include="Models\PatientHagz.cs" />
+    <Compile Include="Models\Prices.cs" />
     <Compile Include="Models\Ray.cs" />
     <Compile Include="Models\Rayreq.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
@@ -293,17 +334,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\139534awomanundergoesamammogramsaspecialtypeofxrayofthebreasts.jpg" />
+    <Content Include="Content\adultafricandescentblack1549001.jpg" />
     <Content Include="Content\armscarecheck905874.jpg" />
     <Content Include="Content\bloodpressuregaugebusinesscomputer263370.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bot102512.png" />
+    <Content Include="Content\businesscareclinic1282308.jpg" />
+    <Content Include="Content\doctorhealingill5795.jpg" />
     <Content Include="Content\downloadfile.jpg" />
     <Content Include="Content\f27f531198f7feb71b7d392583c5b00d2.jpg" />
     <Content Include="Content\FB_IMG_15427066335674161.jpg" />
     <Content Include="Content\FB_IMG_15427066406234931.jpg" />
-    <Content Include="Content\GameLogo.jpg" />
-    <Content Include="Content\gulpfile.js" />
     <Content Include="Content\howtohireanaccountant.jpg" />
     <Content Include="Content\mosa.css" />
     <Content Include="Content\mts.png" />
@@ -334,7 +376,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -355,7 +399,6 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
@@ -434,20 +477,28 @@
     <Content Include="Views\Tamen\Details.cshtml" />
     <Content Include="Views\Tamen\Edit.cshtml" />
     <Content Include="Views\Tamen\Index.cshtml" />
+    <Content Include="Views\Activates\Index.cshtml" />
+    <Content Include="Views\HospitalInfoes\Create.cshtml" />
+    <Content Include="Views\HospitalInfoes\Delete.cshtml" />
+    <Content Include="Views\HospitalInfoes\Details.cshtml" />
+    <Content Include="Views\HospitalInfoes\Edit.cshtml" />
+    <Content Include="Views\HospitalInfoes\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Shared\Index2.cshtml" />
+    <Content Include="Views\Shared\PriceM.cshtml" />
+    <Content Include="Views\Shared\PriceT.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\" />
-    <Folder Include="Content\img\" />
-    <Folder Include="Content\js\" />
-    <Folder Include="Content\scss\" />
-    <Folder Include="Content\vendor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
@@ -514,6 +565,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811152136155_Tamenn.resx">
       <DependentUpon>201811152136155_Tamenn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811241818091_activate.resx">
+      <DependentUpon>201811241818091_activate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811261933429_Hospitalinfo.resx">
+      <DependentUpon>201811261933429_Hospitalinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022152260_price.resx">
+      <DependentUpon>201812022152260_price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022212301_price22.resx">
+      <DependentUpon>201812022212301_price22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022220334_price223.resx">
+      <DependentUpon>201812022220334_price223.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022230023_price2258.resx">
+      <DependentUpon>201812022230023_price2258.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812032101288_checkdate.resx">
+      <DependentUpon>201812032101288_checkdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812032108533_checkdate2.resx">
+      <DependentUpon>201812032108533_checkdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812102121001_mosa.resx">
+      <DependentUpon>201812102121001_mosa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

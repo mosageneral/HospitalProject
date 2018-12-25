@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -11,7 +12,14 @@ namespace HospitalProject.Models
         public int Id { get; set; }
         [Required]
         [Display(Name = "اسم المريض")]
+     
         public string Name { get; set; }
+        [Display(Name = "سعر الكشف")]
+        [Required]
+        public int MaradPriceM { get; set; }
+        [Display(Name = "خصم التأمين")]
+        [Required]
+        public int TamenpriceT { get; set; }
         [Required]
         [Display(Name = "عمر المريض")]
         public int Age { get; set; }
@@ -19,9 +27,13 @@ namespace HospitalProject.Models
         [Display(Name = "عنوان المريض")]
         public string Address { get; set; }
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         [Display(Name = "تاريخ الحجز")]
         public DateTime KashfDate { get; set; }
-       
+
+        [Display(Name = "تاريخ الإستشارة")]
+        [DisplayFormat(DataFormatString ="{0:dd MMM yyyy}")]
+        public DateTime? CheckDate { get; set; }
         [Required]
         [Phone]
         [Display(Name = "رقم الهاتف")]
@@ -30,10 +42,7 @@ namespace HospitalProject.Models
         public virtual Marad marad { get; set; }
         public int TamenId { get; set; }
         public virtual Tamen tamen { get; set; }
-        [Display(Name = "خصم التأمين")]
-        public int TamenMoney { get; set; }
-        [Display(Name = "المبلغ المدفوع")]
-        public int BaidMoney { get; set; }
+      
         [Display(Name ="المبلغ صافي")]
         public int AllMoney { get; set; }
         [Display (Name ="ارسال الى قائمة الإنتظار")]

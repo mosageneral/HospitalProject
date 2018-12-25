@@ -1,0 +1,9 @@
+﻿@model HospitalProject.Models.Tamen
+
+@if (ViewBag.PriceT != null)
+{
+    foreach (var item in ViewBag.PriceT)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+}

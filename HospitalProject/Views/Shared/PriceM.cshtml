@@ -1,0 +1,9 @@
+﻿@model HospitalProject.Models.Marad
+
+@if (ViewBag.PriceM !=null)
+{
+    foreach (var item in ViewBag.PriceM)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+}

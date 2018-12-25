@@ -7,11 +7,12 @@
 
 <h2>انشاء كشف</h2>
 
-@{ 
-    if(HttpContext.Current.User.IsInRole("Nurse"))
-    { 
 
-    using (Html.BeginForm())
+
+
+   
+
+    @using (Html.BeginForm())
     {
     @Html.AntiForgeryToken()
     
@@ -30,9 +31,9 @@
         <div class="form-group ">
             @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })*@
+              @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
                 
-                <input type="date"  name="Age" class="form-control">
+                
                 @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -58,34 +59,36 @@
         <div class="form-group">
             <p class="control-label col-md-2" style="font-size:19px;">التخصص</p>
             <div class="col-md-10">
-                @Html.DropDownList("MaradId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("MaradId", null,"--إختر المرض --", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaradId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <p class="control-label col-md-2" style="font-size:19px;">سعر الكشف</p>
+            <div class="col-md-10">
+                @Html.DropDownListFor(m=>m.MaradPriceM, new SelectList(""), htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaradPriceM, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <p class="control-label col-md-2" style="font-size:19px;">التأمين</p>
             <div class="col-md-10">
-                @Html.DropDownList("TamenId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("TamenId", null, "--إختر نوع التأمين --", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.TamenId, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
-            @Html.LabelFor(model => model.TamenMoney, htmlAttributes: new { @class = "control-label col-md-2" })
+            <p class="control-label col-md-2" style="font-size:19px;">خصم التأمين</p>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TamenMoney, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TamenMoney, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(a=>a.TamenpriceT, new SelectList(""),  htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TamenpriceT, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.BaidMoney, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BaidMoney, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.BaidMoney, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    
+
+    
 
        
         <div class="form-group">
@@ -105,6 +108,15 @@
                 @Html.ValidationMessageFor(model => model.Tashkhees, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.CheckDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               <input name="CheckDate" id="CheckDate" class="form-control" type="datetime"  />
+                @Html.ValidationMessageFor(model => model.CheckDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
 
         <div class="form-group hidden">
             @Html.LabelFor(model => model.Rosheta, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -137,7 +149,7 @@
                 @Html.ValidationMessageFor(model => model.TahlelId, "", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group hidden ">
             @Html.LabelFor(model => model.EndTurn, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
@@ -153,14 +165,49 @@
             </div>
         </div>
     </div>
-}
+        }
 
 <div>
     @Html.ActionLink("عودة", "Index")
 </div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#MaradId").change(function () {
+            var MaradId = $(this).val();
+            debugger
+            $.ajax({
+                type: "Post",
+                url: "/PatientHagzs/GetMaradPrice?MaradId=" + MaradId,
+                contentType: "html",
+                success: function (response) {
+                    debugger
+                    $("#MaradPriceM").empty();
+                    $("#MaradPriceM").append(response);
 
+                }
+            })
+        })
+
+
+        $("#TamenId").change(function () {
+            var TamenId = $(this).val();
+            debugger
+            $.ajax({
+                type: "Post",
+                url: "/PatientHagzs/GetTamenPrice?TamenId=" + TamenId,
+                contentType: "html",
+                success: function (response) {
+                    debugger
+                    $("#TamenpriceT").empty();
+                    $("#TamenpriceT").append(response);
+
+                }
+            })
+        })
+    })
+</script>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-    }
-}
+    
