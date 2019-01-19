@@ -43,7 +43,7 @@
                     <p>@Html.DisplayFor(modelItem => item.Rosheta)</p>
                    <p>@Html.DisplayFor(modelItem => item.ray.Name)</p>
                       <p>@Html.DisplayFor(modelItem => item.tahlel.Name)</p>
-                
+                <br /><br /><br /><br /><br /><br /><br />
             </div>
             <div class="container" id="roshetafooter">
 رقم المحمول /  @ViewBag.Mobile ,,,,, رقم الهاتف  / @ViewBag.Phone ,,,,, @ViewBag.Adress
@@ -55,8 +55,11 @@
             <div class="row">
                 <br />
                 <a id="bt" class="btn btn-primary btn-lg" href="javascript:window.print()">طباعة</a>
+                
                 <br />
+                <p><ـــــــــ></p>
                 <br />
+                
 
                 <div id="bt2">   @Html.ActionLink("كشف", "Edit", "PatientHagzs", new { id = item.Id }, new { @class = "btn btn-primary btn-lg" })</div>
             </div>

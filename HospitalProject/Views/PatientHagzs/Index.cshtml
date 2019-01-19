@@ -14,12 +14,13 @@
 <p style="font-size:20px;">
     @Html.ActionLink("إنشاء كشف", "Create")
 </p>
+
 @{
     if (HttpContext.Current.User.IsInRole("Doctor"))
     {
+       
 
-
-<table class="table">
+<table class="table" id="table_id">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -139,7 +140,7 @@
     }
     if (HttpContext.Current.User.IsInRole("Nurse"))
     {
-        <table class="table">
+        <table class="table" id="table_id">
             <tr>
               
                 <th>
@@ -225,3 +226,14 @@
         </table>
     }
 }
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+			$(document).ready( function () {
+			    $('#table_id').DataTable();
+			} );
+</script>

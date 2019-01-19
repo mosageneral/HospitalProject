@@ -2,16 +2,211 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Smart Doctor</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+  
+  
+        @*
+              @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+            <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        *@
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <!--the new scripts-->
+    
+    
+       <!--  end of the new scripts-->
+    <link href="~/Content/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="~/Content/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="~/Content/css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <link href="~/Content/css/minimal-slider.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="~/Content/css/flexslider.css" type="text/css" media="screen" property="" />
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet"><!-- //online-fonts -->
 </head>
 <body>
-    <nav class="nav navbar-default navbar-Dark navbar-fixed-top " id="nav">
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary ">
+            <h1>
+                <a class="navbar-brand text-white" href="~/Home">
+                    Smart Doctor
+                </a>
+            </h1>
+            <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto text-center">
+                    <li class="nav-item active  mr-3 mt-lg-0 mt-3">
+                        <a class="nav-link" href="~/Home/index">
+                            الرئيسية
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown mr-3 mt-lg-0 mt-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                          خدمات مرضى
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="~/PatientHagzs/index">كشوفات</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/PatientHagzs/create">عمل كشف</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Home/WaitList">لائحة الإنتظار</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/tahlelreqs/">عمل تحليل</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Rayreqs/">عمل أشعه</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Amaleyats/">العمليات</a>
+                            
+                           
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-3 mt-lg-0 mt-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            خدمات ادارية
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="~/Marads/index">إضافة مرض او تخصص</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Tamen/">ادارة التأمينات</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Tahlels/">إدارة التحاليل</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Rays/">إدارة الأشعه</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Adwyas/">إدارة مجموعات الأدوية</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/Workers/">إدارة العاملين</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/HesabatIns/">إدارة الحسابات</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-3 mt-lg-0 mt-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            الإعدادات
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="~/Manage/ChangePassword">لوحة التحكم</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/HospitalInfoes/">ادارة معلومات المستشفى</a>
+                           
+
+                        </div>
+                    </li>
+                   
+                    <li>
+                      
+                        <ul>
+                            @Html.Partial("_LoginPartial")
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+   
+        <div id="Randerbody" >
+            @RenderBody()
+        </div>
+   
+          
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <!-- js -->
+    <script src="~/Content/js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <script src="~/Content/js/minimal-slider.js"></script>
+    <!-- flexSlider (for testimonials) -->
+    <!-- Calendar -->
+    <link rel="stylesheet" href="~/Content/css/jquery-ui.css" />
+    <script src="~/Content/js/jquery-ui.js"></script>
+    <script>
+						  $(function() {
+							$( "#datepicker" ).datepicker();
+						  });
+    </script>
+    <!-- //Calendar -->
+
+    <script defer src="~/Content/js/jquery.flexslider.js"></script>
+    <script>
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+    </script>
+    <!-- //flexSlider (for testimonials) -->
+   
+    <!-- start-smooth-scrolling -->
+    <script src="~/Content/js/move-top.js"></script>
+    <script src="~/Content/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="~/Content/js/SmoothScroll.min.js"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="~/Content/js/bootstrap.js"></script>
+</body>
+</html>
+@*  <nav class="nav navbar-default navbar-Dark navbar-fixed-top " id="nav">
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -38,7 +233,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div id="sidebar" class=" col-md-4">
+            <div id="sidebar" class="col-md-4">
               <ul class="list-group">
                   <li class="list-group-item btn-warning">
                       <a class="list-group-item" href="~/PatientHagzs/Create">
@@ -67,7 +262,7 @@
                   </li>
                   <li class="list-group-item btn-warning">
                       <a class="list-group-item" href="~/Amaleyats/create">
-                          <p class="custom">  العمليات</p> 
+                          <p class="custom">  العمليات</p>
                       </a>
                   </li>
                   <li class="list-group-item btn-warning">
@@ -77,7 +272,7 @@
                   </li>
                   <li class="list-group-item btn-warning">
                       <a class="list-group-item" href="~/tamen/index">
-                          <p class="custom">ادارة التأمينات</p> 
+                          <p class="custom">ادارة التأمينات</p>
                       </a>
                   </li>
                   <li class="list-group-item btn-warning">
@@ -117,24 +312,22 @@
                   </li>
               </ul>
                  </div>
-            <div>        
+            <div>
             </div>
             <div class="col-md-8">
                 <div>
                     @RenderBody()
-                   
+
                     @Scripts.Render("~/bundles/jquery")
                     @Scripts.Render("~/bundles/bootstrap")
                     @RenderSection("scripts", required: false)
                 </div>
             </div>
-         
+
         </div>
         <hr />
         <footer id="foot" class="text-center">
             <p>&copy; @DateTime.Now.Year - Smart Doctor</p>
         </footer>
     </div>
-   
-</body>
-</html>
+*@
